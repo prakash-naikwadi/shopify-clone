@@ -12,6 +12,10 @@
   <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2"
     href="https://cdn.shopify.com/static/fonts/ShopifySans--medium.woff2">
 
+  <!-- ion icon Links -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
   <!-- Tailwind CSS Links -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -34,8 +38,59 @@
   <title>Shopify Clone</title>
 </head>
 
-<body>
-  <h1 class="font-bold text-xl">Hello World</h1>
+<body style="font-family: ShopifySans, Helvetica, Arial, sans-serif;">
+
+  <!-- ************************** -->
+  <!-- Header Section -->
+  <!-- ************************** -->
+
+  <header class="flex justify-between items-center px-7 h-[60px] bg-[#FBF7ED]">
+    <div class="flex-1">
+      <img src="./images/logo-1.png" alt="logo" class="w-[111px]">
+    </div>
+    <nav class="flex items-center gap-2">
+      <ul class="text-[17px] text-[#42474c] font-semibold">
+        <li><a href="#">Log in</a></li>
+      </ul>
+      <div class="h-[44px] w-[44px]">
+        <ion-icon name="reorder-three" class="h-[44px] w-[32px] text-[#515253]"></ion-icon>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ************************** -->
+    <!-- Hero Section -->
+    <!-- ************************** -->
+
+    <section class="bg-[#FBF7ED] px-6 py-16 sm:flex">
+      <div>
+        <h1 class="text-[2rem] font-[700]	 text-[#004c3f] mb-8">The easiest way to sell online in India</h1>
+        <p class="text-[#6b7177] text-lg mb-8">
+          Try one of the most powerful platforms on the market for free. No technical knowledge needed.
+        </p>
+        <div class="mb-8">
+          <div class="mb-8 flex flex-col gap-2">
+            <label for="email" class="hidden">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address"
+              class="flex-1 py-3 px-3 border border-solid border-[#6b7177] rounded outline-[#008060]">
+            <button class="flex-1 bg-[#008060] py-3 px-3 rounded text-white font-semibold">Try for free</button>
+          </div>
+          <p class="text-[#42474c] text-xs">
+            Try Shopify free for 14 days, no credit card required. By entering your email, you agree to receive
+            marketing emails from Shopify.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <video autoplay loop>
+          <source src="./videos/hero-video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+  </main>
 </body>
 
 </html>
