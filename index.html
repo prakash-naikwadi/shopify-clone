@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="xl:text-[20px]">
+<html lang="en" class="xl:text-[20px] lg:text-[18px]">
 
 <head>
   <meta charset="UTF-8">
@@ -44,16 +44,22 @@
   <!-- Header Section -->
   <!-- ************************** -->
 
-  <header class="flex justify-between items-center px-7 h-[60px] bg-[#FBF7ED] max-w-screen-2xl mx-auto">
+  <header class="flex justify-between items-center px-7 h-[60px] bg-[#FBF7ED] max-w-screen-2xl mx-auto lg:px-12">
     <div class="flex-1">
       <img src="./images/logo-1.png" alt="logo" class="w-[111px]">
     </div>
-    <nav class="flex items-center gap-2">
+    <nav class="flex items-center gap-2 lg:gap-3">
       <ul class="text-[17px] text-[#42474c] font-semibold">
         <li><a href="#">Log in</a></li>
       </ul>
-      <div class="h-[44px] w-[44px]">
+      <div class="h-[44px] w-[44px] lg:hidden">
         <ion-icon name="reorder-three" class="h-[44px] w-[32px] text-[#515253]"></ion-icon>
+      </div>
+      <div class="hidden lg:block">
+        <button
+          class=" text-xs bg-[#008060] hover:bg-[#014C3F] shadow-lg transition-all py-2 px-5 rounded text-white font-semibold">
+          Try for free
+        </button>
       </div>
     </nav>
   </header>
@@ -64,7 +70,7 @@
     <!-- Hero Section -->
     <!-- ************************** -->
 
-    <section class="bg-[#FBF7ED] px-6 py-16 sm:flex sm:justify-center sm:items-center">
+    <section class="bg-[#FBF7ED] px-6 lg:px-12 py-16 sm:flex sm:justify-center sm:items-center">
       <div class="sm:w-3/6">
         <h1 class="text-[2rem] font-[700]	 text-[#004c3f] mb-8">The easiest way to sell online in India</h1>
         <p class="text-[#6b7177] text-lg mb-8">
@@ -75,8 +81,10 @@
             <label for="email" class="hidden">Email Address</label>
             <input type="email" id="email" name="email" placeholder="Enter your email address"
               class="flex-1 py-3 px-3 border border-solid border-[#6b7177] rounded outline-[#008060]">
-            <button class="flex-1 md:flex-none bg-[#008060] py-3 px-3 rounded text-white font-semibold">Try for
-              free</button>
+            <button
+              class="flex-1 md:flex-none bg-[#008060] hover:bg-[#014C3F] shadow-lg transition-all py-3 px-3 rounded text-white font-semibold">
+              Try for free
+            </button>
           </div>
           <p class="text-[#42474c] text-xs">
             Try Shopify free for 14 days, no credit card required. By entering your email, you agree to receive
@@ -95,7 +103,7 @@
     <!-- Bring your business online Section -->
     <!-- ************************** -->
 
-    <section class="bg-[#014C3F] text-white px-6 py-16">
+    <section class="bg-[#014C3F] text-white px-6 lg:px-12 py-16">
       <!-- left section -->
       <div class="md:flex md:justify-between md:mb-12 lg:flex-col">
         <div class="md:w-3/4">
@@ -140,7 +148,7 @@
     <!-- Take the best path forward Section -->
     <!-- ************************** -->
 
-    <section class="bg-[#014C3F] text-white px-6 pb-16">
+    <section class="bg-[#014C3F] text-white px-6 lg:px-12 pb-16">
       <h1 class="text-2xl mb-10">Take the best path forward</h1>
       <div class="grid gap-12 grid-cols-1 lg:grid-cols-2 lg:justify-items-center xl:grid-cols-4">
         <!-- Card 01 -->
@@ -190,7 +198,7 @@
     <!-- With you wherever you’re going Section -->
     <!-- ************************** -->
 
-    <section class="px-6 py-16 text-[#6b7177]">
+    <section class="px-6 lg:px-12 py-16 text-[#6b7177]">
       <!-- header -->
       <div class="text-center	pb-10">
         <h1 class="text-[1.75rem] text-[#212326] pb-5 lg:w-3/4 lg:mx-auto">With you wherever you’re going</h1>
@@ -213,7 +221,12 @@
               Use one platform to sell products to anyone, anywhere—in person with Point of Sale and online through your
               website, social media, and online marketplaces.
             </p>
-            <a href="#" class="text-[#008060] font-bold">Explore ways to sell</a>
+            <div class="arrow-animation-parent text-[#008060] flex items-center gap-2">
+              <a href="#" class=" font-bold ">Explore ways to sell</a>
+              <div class="flex items-center gap-2 cursor-pointer">
+                <ion-icon name="arrow-forward" class="arrow"></ion-icon>
+              </div>
+            </div>
           </div>
 
           <!-- right section -->
@@ -235,53 +248,17 @@
               Take the guesswork out of marketing with built-in tools that help you create, execute, and analyze digital
               marketing campaigns.
             </p>
-            <a href="#" class="text-[#008060] font-bold">Explore how to market your business</a>
+            <div class="arrow-animation-parent text-[#008060] flex items-center gap-2">
+              <a href="#" class=" font-bold ">Explore how to market your business</a>
+              <div class="flex items-center gap-2 cursor-pointer">
+                <ion-icon name="arrow-forward" class="arrow"></ion-icon>
+              </div>
+            </div>
           </div>
 
           <!-- right section -->
           <div class="mt-5 lg:w-4/5 lg:flex lg:justify-center">
             <img src="./images/market-your-business.jpg" alt="market-your-business">
-          </div>
-
-        </div>
-
-        <!-- feature 03 -->
-        <div class="pt-10 lg:flex lg:flex-col lg:items-center xl:flex-row">
-
-          <!-- left section -->
-          <div class="lg:w-3/5">
-            <h2 class="text-2xl mb-5 text-[#212326]">Manage everything</h2>
-            <p class="mb-5">
-              Gain the insights you need to grow—use a single dashboard to manage orders, shipping, and payments
-              anywhere you go.
-            </p>
-            <a href="#" class="text-[#008060] font-bold">Explore how to manage your business</a>
-          </div>
-
-          <!-- right section -->
-          <div class="mt-5 text-[#6b7177] text-[2vw] p-6 max-w-full lg:w-4/5 lg:mx-auto">
-            <!-- header -->
-            <div class=" flex justify-between items-center">
-              <div><img src="./images/shopify-bag.png" alt="shopify-bag" class="w-[5vw]"></div>
-              <div class="flex items-center gap-1 bg-[#FAF9F8] pl-[1vw] pr-[20vw] py-[1vw] ml-[10vw]">
-                <ion-icon name="search"></ion-icon>
-                <p>Search</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <div>
-                  <img src="./images/helen-small-591d6ce00cd70d2d1d810b750eb6673679d03e23e79df5e5f85ad183ef277370.jpg"
-                    alt="helen" class="rounded-full w-[7vw]">
-                </div>
-                <div>
-                  <p class="text-[#212326] font-semibold">Helen B.</p>
-                  <p>My Work Space</p>
-                </div>
-              </div>
-            </div>
-            <!-- statistics charts -->
-            <div>
-
-            </div>
           </div>
 
         </div>
@@ -294,7 +271,7 @@
     <!-- Explore more from Shopify in India Section -->
     <!-- ************************** -->
 
-    <section class="bg-[#F3FCF4] text-[#212326] p-7">
+    <section class="bg-[#F3FCF4] text-[#212326] p-7 lg:px-12">
       <h2 class="text-2xl text-[#004c3f] text-center md:text-start mb-10">Explore more from Shopify in India</h2>
       <div class="md:flex md:flex-row-reverse	">
         <div>
@@ -307,7 +284,12 @@
             Find hundreds of experts from India ready to help you get your store up and running, from choosing a theme
             to building a fully customized site.
           </p>
-          <a href="#" class="text-[#008060] font-bold">Browse Experts in India</a>
+          <div class="arrow-animation-parent text-[#008060] flex items-center gap-2">
+            <a href="#" class=" font-bold ">Browse Experts in India</a>
+            <div class="flex items-center gap-2 cursor-pointer">
+              <ion-icon name="arrow-forward" class="arrow"></ion-icon>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -316,14 +298,19 @@
     <!-- Empowering independent business owners everywhere Section -->
     <!-- ************************** -->
 
-    <section class="text-[#212326] px-7 py-8">
+    <section class="text-[#212326] px-7 lg:px-12 py-8">
       <div>
         <h1 class="text-2xl mb-8">Empowering independent business owners everywhere</h1>
         <p class="text-xl mb-8">
           Millions of businesses in <strong>175 countries</strong> around the world have made over <strong>$496 billion
             USD</strong> in sales using Shopify.
         </p>
-        <a href="#" class="text-[#008060] font-bold">Learn more about Shopify</a>
+        <div class="arrow-animation-parent text-[#008060] flex items-center gap-2">
+          <a href="#" class=" font-bold ">Learn more about Shopify</a>
+          <div class="flex items-center gap-2 cursor-pointer">
+            <ion-icon name="arrow-forward" class="arrow"></ion-icon>
+          </div>
+        </div>
       </div>
       <div class="flex justify-center">
         <img src="./images/globe.gif" alt="globe" class="w-3/4">
@@ -334,7 +321,7 @@
     <!-- Testimony Section -->
     <!-- ************************** -->
 
-    <section class="px-7 py-8 text-white md:flex">
+    <section class="px-7 lg:px-12 py-8 text-white md:flex">
       <div class="md:w-2/4"><img src="./images/alicia-testimoney.jpg" alt="alicia-testimoney"
           class="md:w-full h-full object-cover">
       </div>
@@ -353,7 +340,7 @@
     <!-- Customer Logo's Section -->
     <!-- ************************** -->
 
-    <section class="px-7 py-8">
+    <section class="px-7 lg:px-12 py-8">
       <div class="flex flex-wrap justify-center items-center gap-8 px-6">
         <div class="w-[w-1/4]"><img src="./images/bajaao.png" alt="bajaao"></div>
         <div class="w-[w-1/4]"><img src="./images/john-jacobs.png" alt="john-jacobs"></div>
@@ -372,7 +359,7 @@
     <!-- ************************** -->
 
     <section class="bg-[#FBF7ED] pt-16 md:flex">
-      <div class="text-[#212326] px-6 md:w-3/4">
+      <div class="text-[#212326] px-6 lg:px-12 md:w-3/4">
         <h2 class="text-[1.75rem] mb-14 w-4/5 md:w-3/5">Get the help you need, every step of the way</h2>
         <div class="md:flex md:flex-wrap">
           <!-- card 01 -->
@@ -381,7 +368,13 @@
             <p class="text-[#6b7177] mb-4">
               Contact support 24/7, whether you’re troubleshooting issues or looking for business advice.
             </p>
-            <a href="#" class="text-[#008060] font-bold">Contact support</a>
+            <div class="arrow-animation-parent text-[#008060] flex items-center gap-2">
+              <a href="#" class=" font-bold ">Contact support</a>
+              <div class="flex items-center gap-2 cursor-pointer">
+                <ion-icon name="arrow-forward" class="arrow"></ion-icon>
+              </div>
+            </div>
+
           </div>
           <!-- card 02 -->
           <div class="mb-12 w-2/5	">
@@ -389,7 +382,12 @@
             <p class="text-[#6b7177] mb-4">
               Add features and functionality to your business with 6,000+ apps that integrate directly with Shopify.
             </p>
-            <a href="#" class="text-[#008060] font-bold">Visit the Shopify App Store </a>
+            <div class="arrow-animation-parent text-[#008060] flex items-center gap-2">
+              <a href="#" class=" font-bold ">Visit the Shopify App Store</a>
+              <div class="flex items-center gap-2 cursor-pointer">
+                <ion-icon name="arrow-forward" class="arrow"></ion-icon>
+              </div>
+            </div>
           </div>
           <!-- card 03 -->
           <div class="mb-12 w-2/5	">
@@ -397,7 +395,12 @@
             <p class="text-[#6b7177] mb-4">
               Hire a Shopify expert to help you with everything from store setup to SEO.
             </p>
-            <a href="#" class="text-[#008060] font-bold">Explore the Shopify Experts Marketplace </a>
+            <div class="arrow-animation-parent text-[#008060] flex items-center gap-2">
+              <a href="#" class=" font-bold ">Explore the Shopify Experts</a>
+              <div class="flex items-center gap-2 cursor-pointer">
+                <ion-icon name="arrow-forward" class="arrow"></ion-icon>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -411,13 +414,16 @@
     <!-- ************************** -->
 
     <section class="py-16">
-      <div class="flex flex-col items-center justify-center text-center px-6">
+      <div class="flex flex-col items-center justify-center text-center px-6 lg:px-12">
         <h2 class="text-[#212326] text-2xl">Start your business journey with Shopify</h2>
         <p class="text-[#6b7177] mt-5">
           Try Shopify for free, and explore all the tools and services you need to start, run, and grow your business.
         </p>
         <div class="mt-10">
-          <a href="#" class="px-7 py-4 bg-[#008060] text-white font-bold ">Start free trial</a>
+          <a href="#"
+            class="px-7 py-4 bg-[#008060] hover:bg-[#014C3F] transition-all shadow-lg text-white font-bold rounded">Start
+            free
+            trial</a>
         </div>
       </div>
     </section>
@@ -426,19 +432,24 @@
     <!-- Back on top btn Section -->
     <!-- ************************** -->
 
-    <div class="text-end pb-8 px-8">
-      <a href="#" class="text-[#008060] text-lg font-bold">Back to top</a>
+    <div class="text-end pb-8 px-8 lg:px-12">
+      <div class="arrow-animation-parent text-[#008060]  flex justify-end items-center gap-2 ">
+        <a href="#" class="font-bold text-end">Back to top</a>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <ion-icon name="arrow-up" class="arrow-up"></ion-icon>
+        </div>
+      </div>
     </div>
 
   </main>
 
   <!-- ************************** -->
-  <!-- Back on top btn Section -->
+  <!-- Footer Section -->
   <!-- ************************** -->
 
   <footer class="bg-[#002E25] pt-6">
     <!-- footer top -->
-    <div class="px-6">
+    <div class="px-6 lg:px-12">
       <ul class="flex flex-wrap justify-center gap-4 text-white font-bold">
         <li class="w-fit"><a href="#">About</a></li>
         <li class="w-fit"><a href="#">Careers</a></li>
@@ -452,7 +463,7 @@
 
 
     <!-- footer middle -->
-    <div class="flex justify-between items-start flex-wrap gap-1 gap-y-4 px-6">
+    <div class="flex justify-between items-start flex-wrap gap-1 gap-y-4 px-6 lg:px-12">
 
       <!-- col-01 online store -->
       <div class="text-sm text-[#b6babf] basis-2/5">
@@ -529,7 +540,7 @@
     <hr class="my-8 border-[#6b7177]">
 
     <!-- footer bottom -->
-    <div class="py-8 px-6 flex flex-wrap justify-center items-center gap-6">
+    <div class="py-8 px-6 lg:px-12 flex flex-wrap justify-center items-center gap-6">
 
       <!-- social icons -->
       <div class="flex gap-4">
